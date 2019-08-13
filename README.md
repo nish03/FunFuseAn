@@ -1,6 +1,7 @@
 ![GitHub Logo](/docs/logo.png)
 This is the open source toolkit for the MBIA-MICCAI 2019 paper titled [Structural Similarity based Anatomical and Functional Brain Imaging Fusion](http://arxiv.org/abs/1908.03958) by **N.Kumar et al**. 
 
+![GitHub Logo](/docs/architecture.png)
 
 The paper performs the following tasks:
 * Develops a novel end-to-end unsupervised fusion algorithm for anatomical and functional imaging modalities using Convolutional Neural Networks.
