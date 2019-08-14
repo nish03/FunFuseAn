@@ -12,9 +12,15 @@ The paper performs the following tasks:
 
 
 ## Prerequisites
-
+* Python 2.7
+* Tensorflow 1.0.x
+* numpy
+* matplotlib
+* skimage
+* MATLAB
 
 ## Usage
+![GitHub Logo](/docs/Visual results.png)
 
 
 ## How to Cite
