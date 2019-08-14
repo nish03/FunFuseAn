@@ -19,7 +19,7 @@ The paper performs the following tasks:
 * skimage
 * MATLAB
 
-![GitHub Logo](/docs/Visual results.jpg)
+![Logo](/docs/Visual results.jpg)
 
 ## Usage
 
