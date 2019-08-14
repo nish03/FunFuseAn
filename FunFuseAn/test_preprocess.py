@@ -22,6 +22,7 @@ def test_preprocess_mri():
         test_mri[i,:,:] = np.float32(test_mri[i,:,:])
     
     test_mri = test_mri[:,:,:,np.newaxis]
+    return test_mri
 
 
 def test_preprocess_pet():
@@ -38,3 +39,4 @@ def test_preprocess_pet():
         test_pet[i,:,:] = np.float32(test_oth[i,:,:])
     
     test_pet = test_pet[:,:,:,np.newaxis]
+    return test_pet
