@@ -9,8 +9,8 @@ import imageio
 from FunFuseAn.init_param import init_param
 
 def test_preprocess_mri():
-    filenames = os.listdir('/home/nora/Desktop/Datasets/Grayscale_modalities/Testing/MR-T2/')
-    dataset = os.path.join(os.getcwd(), '/home/nora/Desktop/Datasets/Grayscale_modalities/Testing/MR-T2/')
+    filenames = os.listdir('/home/......./Testing/MRI/')
+    dataset = os.path.join(os.getcwd(), '/home/......./Testing/MRI/')
     data = []
     for ext in ('*.gif', '*.png', '*.jpg','*.tif'):
         data.extend(glob.glob(os.path.join(dataset, ext)))
@@ -25,8 +25,8 @@ def test_preprocess_mri():
 
 
 def test_preprocess_pet():
-    filenames = os.listdir('/home/nora/Desktop/Datasets/Grayscale_modalities/Testing/CT/')
-    dataset = os.path.join(os.getcwd(), '/home/nora/Desktop/Datasets/Grayscale_modalities/Testing/CT/')
+    filenames = os.listdir('/home/......./Testing/PET/')
+    dataset = os.path.join(os.getcwd(), '/home/......./Testing/PET/')
     data = []
     for ext in ('*.gif', '*.png', '*.jpg', '*.tif'):
         data.extend(glob.glob(os.path.join(dataset, ext)))
