@@ -20,7 +20,6 @@ The paper performs the following tasks:
 * MATLAB
 
 ## Usage
-![](/docs/Visual results.jpg)
 
 
 ## How to Cite
