@@ -9,6 +9,7 @@ import imageio
 from FunFuseAn.init_param import init_param
 
 def train_preprocess_mri():
+    image_length, image_width, gray_channels, batch_size, epoch, lr, images_pet, images_mri = init_param()
     filenames = os.listdir('/home/...../Training/MRI/')
     dataset = os.path.join(os.getcwd(), '/home/...../Training/MRI/')
     data = glob.glob(os.path.join(dataset, "*.gif"))
@@ -23,6 +24,7 @@ def train_preprocess_mri():
     
  
 def train_preprocess_pet():    
+    image_length, image_width, gray_channels, batch_size, epoch, lr, images_pet, images_mri = init_param()
     filenames = os.listdir('/home/...../Training/PET/')
     dataset = os.path.join(os.getcwd(), '/home/...../Training/PET/')
     data = glob.glob(os.path.join(dataset, "*.gif"))
