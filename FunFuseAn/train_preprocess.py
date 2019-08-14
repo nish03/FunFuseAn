@@ -6,7 +6,7 @@ import natsort
 import glob
 import numpy as np
 import imageio
-from FunFuseAn import init_param
+from FunFuseAn.init_param import init_param
 
 def train_preprocess_mri():
     filenames = os.listdir('/home/...../Training/MRI/')
