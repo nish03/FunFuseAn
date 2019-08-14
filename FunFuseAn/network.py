@@ -3,7 +3,7 @@ import tensorflow as tf
 import numpy as np
 from FunFuseAn.init_param import init_param
 
-image_length, image_width, gray_channels, batch_size, epoch, lr, images_pet, images_mri = init_param()
+image_length, image_width, gray_channels, batch_size, epoch, lr, pet_image, mri_image = init_param()
 def network(images_pet, images_mri):
     with tf.variable_scope('network'):
         ######feature extraction layers######
@@ -12,28 +12,28 @@ def network(images_pet, images_mri):
         with tf.variable_scope('mri_lf_layer1'):
             weights=tf.get_variable("w_mri_lf_1",[9,9,1,16],initializer=tf.truncated_normal_initializer(stddev=1e-2))
             bias=tf.get_variable("b_mri_lf_1",[16],initializer=tf.constant_initializer(0.0))
-            conv1= tf.contrib.layers.batch_norm(tf.nn.conv2d(images_mri, weights, strides=[1,1,1,1], padding='SAME') + bias, decay=0.9, updates_collections=None, epsilon=1e-5, scale=True)
+            conv1= tf.contrib.layers.batch_norm(tf.nn.conv2d(mri_image, weights, strides=[1,1,1,1], padding='SAME') + bias, decay=0.9, updates_collections=None, epsilon=1e-5, scale=True)
             conv1 = tf.maximum(conv1, 0.2 * conv1) #Leaky RELU
             
         ###low frequency PET layer###
         with tf.variable_scope('pet_lf_layer1'):
             weights=tf.get_variable("w_pet_lf_1",[7,7,1,16],initializer=tf.truncated_normal_initializer(stddev=1e-2))
             bias=tf.get_variable("b_pet_lf_1",[16],initializer=tf.constant_initializer(0.0))
-            conv2= tf.contrib.layers.batch_norm(tf.nn.conv2d(images_pet, weights, strides=[1,1,1,1], padding='SAME') + bias, decay=0.9, updates_collections=None, epsilon=1e-5, scale=True)
+            conv2= tf.contrib.layers.batch_norm(tf.nn.conv2d(pet_image, weights, strides=[1,1,1,1], padding='SAME') + bias, decay=0.9, updates_collections=None, epsilon=1e-5, scale=True)
             conv2 = tf.maximum(conv2, 0.2 * conv2) #Leaky RELU  
            
         ###high frequency MRI layer 1 ###
         with tf.variable_scope('mri_hf_layer1'):
             weights=tf.get_variable("w_mri_hf_1",[3,3,1,16],initializer=tf.truncated_normal_initializer(stddev=1e-2))
             bias=tf.get_variable("b_mri_hf_1",[16],initializer=tf.constant_initializer(0.0))
-            conv3= tf.contrib.layers.batch_norm(tf.nn.conv2d(images_mri, weights, strides=[1,1,1,1], padding='SAME') + bias, decay=0.9, updates_collections=None, epsilon=1e-5, scale=True)
+            conv3= tf.contrib.layers.batch_norm(tf.nn.conv2d(mri_image, weights, strides=[1,1,1,1], padding='SAME') + bias, decay=0.9, updates_collections=None, epsilon=1e-5, scale=True)
             conv3 = tf.maximum(conv3, 0.2 * conv3) #Leaky RELU
             
         ###high frequency PET layer 1 ###
         with tf.variable_scope('pet_hf_layer1'):
             weights=tf.get_variable("w_pet_hf_1",[5,5,1,16],initializer=tf.truncated_normal_initializer(stddev=1e-2))
             bias=tf.get_variable("b_pet_hf_1",[16],initializer=tf.constant_initializer(0.0))
-            conv4= tf.contrib.layers.batch_norm(tf.nn.conv2d(images_pet, weights, strides=[1,1,1,1], padding='SAME') + bias, decay=0.9, updates_collections=None, epsilon=1e-5, scale=True)
+            conv4= tf.contrib.layers.batch_norm(tf.nn.conv2d(pet_image, weights, strides=[1,1,1,1], padding='SAME') + bias, decay=0.9, updates_collections=None, epsilon=1e-5, scale=True)
             conv4 = tf.maximum(conv4, 0.2 * conv4) #Leaky RELU        
             
         ####high frequency MRI layer 2 ###
