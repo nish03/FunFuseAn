@@ -22,7 +22,8 @@ def train_preprocess_mri():
         train_mri[i,:,:] =(train_mri[i,:,:] - np.min(train_mri[i,:,:])) / (np.max(train_mri[i,:,:]) - np.min(train_mri[i,:,:]))
         train_mri[i,:,:] = np.float32(train_mri[i,:,:])
     
-    train_mri = train_mri[:,:,:,np.newaxis]   
+    train_mri = train_mri[:,:,:,np.newaxis]
+    return train_mri
     
  
 def train_preprocess_pet():    
@@ -40,6 +41,7 @@ def train_preprocess_pet():
         train_pet[i,:,:] = np.float32(train_pet[i,:,:])
         
     train_pet = train_pet[:,:,:,np.newaxis]
+    return train_pet
     
     
   
