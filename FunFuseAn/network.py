@@ -84,7 +84,7 @@ def network(mri_image, pet_image):
         ######2nd Fusion rule: Low frequency features######
         fused_lf_features = (conv1 + conv2 + recon2)/3
             
-        #######reconstruction layer 3######
+        ######reconstruction layer 3######
         with tf.variable_scope('recon_layer3'):
             weights=tf.get_variable("w_recon_3",[5,5,16,1],initializer=tf.truncated_normal_initializer(stddev=1e-2))
             bias   =tf.get_variable("b_recon_3",[1],initializer=tf.constant_initializer(0.0))
