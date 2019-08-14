@@ -20,7 +20,7 @@ The paper performs the following tasks:
 * MATLAB
 
 ## Usage
-![GitHub Logo1](/docs/Visual results.png)
+![GitHub Logo1](/docs/Visual results.jpg)
 
 
 ## How to Cite
