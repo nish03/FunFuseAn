@@ -20,6 +20,5 @@ def ssim(img1, img2, alpha, beta_gamma, max_val):
     img1 = convert_image_dtype(img1, dtypes.float32)
     img2 = convert_image_dtype(img2, dtypes.float32)
     (ssim_per_channel, _) = _ssim_per_channel(img1, img2, alpha, beta_gamma, max_val)
-
   # Compute average over color channels.
     return math_ops.reduce_mean(ssim_per_channel, [-1])
