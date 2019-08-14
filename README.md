@@ -19,8 +19,9 @@ The paper performs the following tasks:
 * skimage
 * MATLAB
 
-## Usage
+![GitHub Logo](/docs/Visual results.jpg)
 
+## Usage
 
 ## How to Cite
 Coming Soon
