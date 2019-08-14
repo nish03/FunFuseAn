@@ -4,7 +4,7 @@ import numpy as np
 from FunFuseAn.init_param import init_param
 
 image_length, image_width, gray_channels, batch_size, epoch, lr, pet_image, mri_image = init_param()
-def network(images_pet, images_mri):
+def network(pet_image, mri_image):
     with tf.variable_scope('network'):
         ######feature extraction layers######
         
