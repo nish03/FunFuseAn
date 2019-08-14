@@ -16,3 +16,9 @@ def init_param():
 
     #define the learning rate
     lr = 0.002
+    
+    #define input placeholders for the fusion network
+    images_pet   =  tf.placeholder(tf.float32, [None, image_width,image_length,gray_channels],name='images_pet')
+    images_mri   =  tf.placeholder(tf.float32, [None, image_width,image_length,gray_channels],name ='images_mri')
+    
+    return image_length, image_width, gray_channels, batch_size, epoch, lr, images_pet, images_mri
