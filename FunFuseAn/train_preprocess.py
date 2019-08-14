@@ -12,7 +12,9 @@ def train_preprocess_mri():
     image_length, image_width, gray_channels, batch_size, epoch, lr, images_pet, images_mri = init_param()
     filenames = os.listdir('/home/...../Training/MRI/')
     dataset = os.path.join(os.getcwd(), '/home/...../Training/MRI/')
-    data = glob.glob(os.path.join(dataset, "*.gif"))
+    data = []
+    for ext in ('*.gif', '*.png', '*.jpg','*.tif'):
+        data.extend(glob.glob(os.path.join(dataset, ext)))
     data = natsort.natsorted(data,reverse=False)
     train_mri = np.zeros((len(data), image_width,image_length),dtype=float)
     for i in range(len(data)):
@@ -27,7 +29,9 @@ def train_preprocess_pet():
     image_length, image_width, gray_channels, batch_size, epoch, lr, images_pet, images_mri = init_param()
     filenames = os.listdir('/home/...../Training/PET/')
     dataset = os.path.join(os.getcwd(), '/home/...../Training/PET/')
-    data = glob.glob(os.path.join(dataset, "*.gif"))
+    data = []
+    for ext in ('*.gif', '*.png', '*.jpg','*.tif'):
+        data.extend(glob.glob(os.path.join(dataset, ext)))
     data = natsort.natsorted(data,reverse=False)
     train_pet = np.zeros((len(data),image_width,image_length),dtype=float)
     for i in range(len(data)):
