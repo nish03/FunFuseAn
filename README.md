@@ -22,7 +22,7 @@ The paper performs the following tasks:
 ## Results
 ![Logo](https://github.com/nish03/FunFuseAn/blob/master/docs/Visual%20results.png)
 
-![Logo](https://github.com/nish03/FunFuseAn/blob/master/docs/Loss%20Curves.png)
+![Logo1](https://github.com/nish03/FunFuseAn/blob/master/docs/Loss%20curves.png)
 
 ## Usage
 
