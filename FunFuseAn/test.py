@@ -13,8 +13,8 @@ image_length, image_width, gray_channels, batch_size, epoch, lr, pet_image, mri_
 fused_image = network(mri_image,pet_image)
 
 #import test images
-test_mri = test_preprocess_mri()
-test_pet = test_preprocess_pet()
+test_mri = test_preprocess_mri(image_width,image_length)
+test_pet = test_preprocess_pet(image_width,image_length)
 
 #run the test session
 fused_test_image = []
