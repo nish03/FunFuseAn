@@ -21,11 +21,11 @@ fused_test_image = []
 with tf.Session() as sess:
     sess.run(tf.global_variables_initializer())
     saver.restore(sess, '/home/....../Checkpoint_lambda_0/')
-    for idx in range(0, batch_idxs):
-      batch_test_mri = test_mri[idx*batch_size : (idx+1)*batch_size,:,:,:]
-      batch_test_pet = test_pet[idx*batch_size : (idx+1)*batch_size,:,:,:]
-      img = sess.run(fused_image, feed_dict={images_mri: test_mri, 
-                                             images_pet: test_pet})
-      fused_test_image.append(img) 
+    for idx in range(0, len(test_mri[:,0,0,0]):
+        batch_test_mri = test_mri[idx*batch_size : (idx+1)*batch_size,:,:,:]
+        batch_test_pet = test_pet[idx*batch_size : (idx+1)*batch_size,:,:,:]
+        img = sess.run(fused_image, feed_dict={images_mri: batch_test_mri, 
+                                               images_pet: batch_test_pet})
+        fused_test_image.append(img) 
     
 
