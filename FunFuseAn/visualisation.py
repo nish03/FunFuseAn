@@ -17,8 +17,8 @@ image_length, image_width, gray_channels, batch_size, epoch, lr, pet_image, mri_
 fused_image = network(mri_image,pet_image)
 
 #import test images
-test_mri = test_preprocess_mri()
-test_pet = test_preprocess_pet()
+test_mri = test_preprocess_mri(image_width,image_length)
+test_pet = test_preprocess_pet(image_width,image_length)
 
 #define gradients of the fused image
 grad_mri = []
@@ -34,7 +34,7 @@ gradients_pet = tf.gradients(fused_image, images_pet)
 with tf.Session() as sess:
     sess.run(tf.global_variables_initializer())
     saver.restore(sess, '/home/..../Checkpoint_lambda_0/')
-    for idx in range(0, batch_idxs):
+    for idx in range(0, len(test_mri[:,0,0,0])):
         batch_test_mri = test_mri[idx*batch_size : (idx+1)*batch_size,:,:,:]
         batch_test_pet = test_pet[idx*batch_size : (idx+1)*batch_size,:,:,:]
         grad_mr, grad_pe, fuse = sess.run([gradients_mri, gradients_pet, fused_image], feed_dict={images_mri: batch_test_mri, 
