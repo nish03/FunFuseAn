@@ -22,6 +22,7 @@ The paper performs the following tasks:
 ![Logo](https://github.com/nish03/FunFuseAn/blob/master/docs/Visual%20results.png)
 
 ## Usage
+![Logo](https://github.com/nish03/FunFuseAn/blob/master/docs/Loss%20Curves.png)
 
 ## How to Cite
 Coming Soon
