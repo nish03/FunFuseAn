@@ -19,10 +19,12 @@ The paper performs the following tasks:
 * skimage
 * MATLAB
 
+## Results
 ![Logo](https://github.com/nish03/FunFuseAn/blob/master/docs/Visual%20results.png)
 
-## Usage
 ![Logo](https://github.com/nish03/FunFuseAn/blob/master/docs/Loss%20Curves.png)
+
+## Usage
 
 ## How to Cite
 Coming Soon
