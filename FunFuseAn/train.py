@@ -5,10 +5,14 @@ import tensorflow as tf
 from FunFuseAn.ssim_function import ssim
 from FunFuseAn.init_param import init_param
 from FunFuseAn.network import network
-
+from FunFuseAn.train_preprocess import train_preprocess_mri, train_preprocess_pet
 
 #define placeholders
 image_length, image_width, gray_channels, batch_size, epoch, lr, images_pet, images_mri = init_param()
+
+#import train dataset
+train_mri = train_preprocess_mri(image_width, image_length)
+train_pet = train_preprocess_pet(image_width, image_length)
 
 #define the network 
 fused_image = network(images_mri,images_pet)
@@ -52,8 +56,7 @@ with tf.Session() as sess:
         mri_l2_Loss = []
         pet_l2_Loss = []
         #run batch images
-        batch_idxs = 272 // batch_size
-        for idx in range(0, batch_idxs):
+        for idx in range(0, len(train_mri[:,0,0,0])):
             batch_images_mri = train_mri[idx*batch_size : (idx+1)*batch_size,:,:,:]
             batch_images_pet = train_pet[idx*batch_size : (idx+1)*batch_size,:,:,:]
             counter += 1
