@@ -19,7 +19,7 @@ The paper performs the following tasks:
 * skimage
 * MATLAB
 
-![Logo](/docs/Visual results.png)
+![Logo](https://github.com/nish03/FunFuseAn/blob/master/docs/Visual%20results.png)
 
 ## Usage
 
