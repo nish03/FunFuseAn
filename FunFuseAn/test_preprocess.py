@@ -8,7 +8,9 @@ import numpy as np
 import imageio
 from FunFuseAn.init_param import init_param
 
-def test_preprocess_mri():
+
+image_length, image_width, gray_channels, batch_size, epoch, lr, images_pet, images_mri = init_param()
+def test_preprocess_mri(image_width,image_length):
     filenames = os.listdir('/home/......./Testing/MRI/')
     dataset = os.path.join(os.getcwd(), '/home/......./Testing/MRI/')
     data = []
@@ -25,7 +27,7 @@ def test_preprocess_mri():
     return test_mri
 
 
-def test_preprocess_pet():
+def test_preprocess_pet(image_width,image_length):
     filenames = os.listdir('/home/......./Testing/PET/')
     dataset = os.path.join(os.getcwd(), '/home/......./Testing/PET/')
     data = []
