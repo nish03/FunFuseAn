@@ -13,7 +13,7 @@ The paper performs the following tasks:
 
 ## Prerequisites
 * Python 2.7
-* Tensorflow 1.0.x
+* Tensorflow 1.0.x or Pytorch 1.0 above
 * numpy
 * matplotlib
 * skimage
