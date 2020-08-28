@@ -24,8 +24,15 @@ The paper performs the following tasks:
 
 ![Logo1](https://github.com/nish03/FunFuseAn/blob/master/docs/Loss%20curves.png)
 
-  ## Data
+## Data
 The training of the FunFuseAn network was done with 500 MRI-PET image pairs available at Alzheimer’s Disease Neuroimaging Initiative (ADNI) as mentioned in the paper. Although, the data is available for public use, it is still required to apply for getting the access to the repository by filling out a questionaire. In case you are interested to obtain the data, please apply at [this link](http://adni.loni.usc.edu/data-samples/access-data/). For conducting the inference of our network, in addition to the ADNI test data, we also used 10 image pairs from [Harvard Whole Brain Atlas](http://www.med.harvard.edu/AANLIB/) which is also publicly available and donot required any written permission. We therefore uploaded this data for your usage.
+
+## Usage
+For training and testing the FunFuseAn network, you can use either of the Tensorflow and PyTorch as your Deep learning package while we only provide tensorflow code for the visualisation part. For easier implementation, we recommend you to follow the jupyter notebooks (for both tensorflow and pytorch versions) provided in this repository.
+
+## Evaluation
+
+
 
 ## How to Cite
 @InProceedings{10.1007/978-3-030-33226-6_14,
