@@ -1,5 +1,5 @@
 ![GitHub Logo](/docs/logo.png)
-This is the open source toolkit for the MBIA-MICCAI 2019 paper titled [Structural Similarity based Anatomical and Functional Brain Imaging Fusion](http://arxiv.org/abs/1908.03958) by **N.Kumar et al**. 
+This is the open source toolkit for the MBIA-MICCAI 2019 paper titled [Structural Similarity based Anatomical and Functional Brain Imaging Fusion](https://link.springer.com/chapter/10.1007/978-3-030-33226-6_14) by **N.Kumar et al**. 
 
 ![GitHub Logo](/docs/architecture.png)
 
