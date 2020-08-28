@@ -31,8 +31,10 @@ The training of the FunFuseAn network was done with 500 MRI-PET image pairs avai
 For training and testing the FunFuseAn network, you can use either Tensorflow or PyTorch as your Deep learning package while we only provide Tensorflow code for the visualisation part. For easier implementation, we recommend you to follow the jupyter notebooks (for both tensorflow and pytorch versions) provided in this repository.
 
 ## Evaluation metrics
-We quantitatively evaluated the quality of our end-to-end unsupervised learning based fusion method with some popular fusion metrics using MATLAB. The code of the fusion metrics used has been provided in the folder 'Fusion metrics' in this repository. The author and citation details of each of these metrics are given in the comment section of the code. If you use these fusion metrics for evaluation of your own fusion method, we recommend you to properly cite the original contribution. For running these metrics, you need two grayscale input images and a grayscale fused image. For getting the metric scores all at once, you need to run fusionAssess.m file.
+As mentioned in the paper, we quantitatively evaluated the quality of our end-to-end unsupervised learning based medical image fusion method with some popular fusion metrics using MATLAB. The code of the fusion metrics used has been provided in the folder 'Fusion metrics' in this repository. The author and citation details of each of these metrics are given in the comment section of the code. If you use these fusion metrics for evaluation of your own fusion method, we recommend you to properly cite the original contribution. For running these metrics, you need two grayscale input images and a grayscale fused image. For getting the metric scores all at once, you need to run fusionAssess.m file.
 
+## Evaluated fusion methods
+As mentioned in the paper, we used several existing fusion methods and compared their metric scores with those obtained from FunFuseAn. The code for the evaluated fusion methods are publicly available. In case of any questions related to these fusion methods, please contact the corresponding authors.   
 
 ## How to Cite
 @InProceedings{10.1007/978-3-030-33226-6_14,
