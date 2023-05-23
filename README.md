@@ -37,7 +37,8 @@ As mentioned in the paper, we quantitatively evaluated the quality of our end-to
 As mentioned in the paper, we used several existing fusion methods and compared their metric scores with those obtained from FunFuseAn. The code for the evaluated fusion methods are publicly available. In case of any questions related to these fusion methods, please contact the corresponding authors.   
 
 ## How to Cite
-```@InProceedings{10.1007/978-3-030-33226-6_14,
+```
+@InProceedings{10.1007/978-3-030-33226-6_14,
 author="Kumar, Nishant
 and Hoffmann, Nico
 and Oelschl{\"a}gel, Martin
